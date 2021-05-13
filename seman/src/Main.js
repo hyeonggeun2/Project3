@@ -7,7 +7,9 @@ function Main() {
   return (
     <div>
       <Nav />
-      MAIN
+      <div className="main">
+        MAIN
+      </div>
       <Footer />
     </div>
   );

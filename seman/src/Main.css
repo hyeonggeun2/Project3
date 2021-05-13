@@ -7,3 +7,8 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.main {
+  width:70vw;
+  margin: 0 auto;
+}
