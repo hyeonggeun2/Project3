@@ -51,7 +51,7 @@ function Product(props){
             </ul>
           </div>
         </div>
-        <a href="#" className="btn">Go Details</a>
+        <a href={props.detail} className="btn">Go Details</a>
       </section>
     </div>
   );

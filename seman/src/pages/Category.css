@@ -1,9 +1,18 @@
-.card_box {
-  border: red 1px solid;
+.product_box {
+  border: black 1px solid;
   width: 90vw;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   display:flex;
   flex-wrap: wrap;
-  flex: auto;
 }
 
+.sort_bar{
+  display:flex;
+  justify-content: flex-end;
+  width: 90vw;
+}
+
+.sort_item {
+  list-style: none;
+  padding: 0 5px;
+}

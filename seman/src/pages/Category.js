@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Nav from '../components/Nav/Nav';
 import Footer from '../components/Footer/Footer';
 import Product from '../components/Product/Product';
+import Pagination from '../components/Pagination/Pagination'
 import axios from "axios";
 import "./Category.css";
 
@@ -15,13 +16,15 @@ class Category extends Component {
   state = {
     loading: false,
     ItemList: [{
+        "code": 0,
         "image": "",
         "name": "",
         "OriginalPrice": 0,
         "SalePrice": 0,
         "Sizes": [],
         "Colors": []
-    }]
+    }],
+    max_page: 0
   };
 
   split_path = this.props.location.pathname.split('/')
@@ -34,7 +37,8 @@ class Category extends Component {
     axios.get(this.api_path).then(({data}) => {
       this.setState({
         loading: true,
-        ItemList: data.Item
+        ItemList: data.Item,
+        max_page: data.max_page
       });
     }).catch(e => {
       console.error(e);
@@ -51,19 +55,32 @@ class Category extends Component {
 
   render(){
     const { ItemList } = this.state;
-    console.log(ItemList[0].SalePrice);
 
     return(
       <div>
         <Nav/>
-        {ItemList.map((item) => {
-          return(<Product image={item.image}
-                          name={item.name}
-                          originalPrice={numberWithCommas(item.OriginalPrice)}
-                          salePrice={numberWithCommas(item.SalePrice)}
-                          sizes={item.Sizes}
-                          colors={item.Colors}/>)
-        })}
+        <h2>{this.path.toUpperCase()}</h2>
+        <ul className="sort_bar">
+          <li className="sort_item">상품명</li>
+          <li className="sort_item">낮은가격</li>
+          <li className="sort_item">높은가격</li>
+          <li className="sort_item">인기상품</li>
+        </ul>
+        <div className="product_box">
+          {ItemList.map((item) => {
+            return(<Product image={item.image}
+                            detail={'/detail/' + item.code}
+                            name={item.name}
+                            originalPrice={numberWithCommas(item.OriginalPrice)}
+                            salePrice={numberWithCommas(item.SalePrice)}
+                            sizes={item.Sizes}
+                            colors={item.Colors}/>)
+          })}
+        </div>
+        <Pagination page={this.page}
+                    next={this.page*1 + 1}
+                    prev={this.page*1 - 1}
+                    max_page={this.state.max_page}/>
         <Footer/>
       </div>
     );

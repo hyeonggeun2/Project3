@@ -9,6 +9,7 @@ p {
     height: 500px;
     overflow: hidden;
     width: 350px;
+    margin: 39px;
 }
 
 .card > figure {
@@ -27,7 +28,7 @@ p {
     padding: 10px 20px;
     position: absolute;
     top: 85%;
-    width: 90%;
+    width: 88%;
     transition: box-shadow .3s ease-in-out,
                 top .3s ease-in-out;
 }
@@ -88,7 +89,7 @@ p {
 }
 
 .btn {
-    background-color: #192a56;
+    background-color: darkslategray;
     border-radius: 5px;
     color: #FFF;
     display: block;
@@ -132,4 +133,9 @@ p {
     color: skyblue;
     font-weight: 700;
     padding-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 50px;
 }

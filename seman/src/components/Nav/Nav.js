@@ -13,26 +13,26 @@ function Nav(){
         </div>
       </nav>
       <div className="category">
-        <a className="category-menu" href="/category/all">ALL</a>
+        <a className="category-menu" href="/category/all/1">ALL</a>
         <Category title="OUTER">
-          <Contents content_name="Jacket" href="/category/jacket"/>
-          <Contents content_name="Cardigan" href="/category/cardigan"/>
+          <Contents content_name="Jacket" href="/category/jacket/1"/>
+          <Contents content_name="Cardigan" href="/category/cardigan/1"/>
         </Category>
 
         <Category title="TOP">
-          <Contents content_name="T-shirts" href="/category/tshirts"/>
-          <Contents content_name="Shirts" href="/category/shirts"/>
-          <Contents content_name="Knit" href="/category/knit"/>
+          <Contents content_name="T-shirts" href="/category/tshirts/1"/>
+          <Contents content_name="Shirts" href="/category/shirts/1"/>
+          <Contents content_name="Knit" href="/category/knit/1"/>
         </Category>
 
         <Category title="BOTTOM">
-          <Contents content_name="Slacks" href="/category/slacks"/>
-          <Contents content_name="Denim" href="/category/denim"/>
-          <Contents content_name="Pants" href="/category/pants"/>
-          <Contents content_name="Half-Pants" href="/category/half-pants"/>
+          <Contents content_name="Slacks" href="/category/slacks/1"/>
+          <Contents content_name="Denim" href="/category/denim/1"/>
+          <Contents content_name="Pants" href="/category/pants/1"/>
+          <Contents content_name="Half-Pants" href="/category/half-pants/1"/>
         </Category>
-        <a className="category-menu" href="/qna">묻고 답하기</a>
-        <a className="category-menu" href="/news">공지사항</a>
+        <a className="category-menu" href="/qna/1">묻고 답하기</a>
+        <a className="category-menu" href="/news/1">공지사항</a>
       </div>
     </header>
   )
