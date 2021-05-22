@@ -1,0 +1,19 @@
+{
+  "Item": [
+    {
+      "image": "https://fitchinnom.com/web/product/big/202105/9e90ec92f301ada3070fcd8b5daedf52.jpg",
+      "name": "스투시 반팔티",
+      "OriginalPrice": 29800,
+      "SalePrice": 26230,
+      "Sizes": ["S", "M", "L", "XL"],
+      "Colors": ["black", "white", "yellow"]
+    },
+    {
+      "image": "https://fitchinnom.com/web/product/big/202105/bd82c8b4544e1ffdf922921941f4d58b.jpg",
+      "name": "슈프림 반팔티",
+      "OriginalPrice": 54800,
+      "Sizes": ["M", "L", "XL"],
+      "Colors": ["black", "white", "yellow", "blue"]
+    }
+  ]
+}
