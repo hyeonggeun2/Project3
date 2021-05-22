@@ -1,0 +1,9 @@
+.card_box {
+  border: red 1px solid;
+  width: 90vw;
+  margin: 0 auto;
+  display:flex;
+  flex-wrap: wrap;
+  flex: auto;
+}
+
