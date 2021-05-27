@@ -1,5 +1,5 @@
 .nav {
-  width: 99vw;
+  width: 100vw;
   height: 50px;
   background-color: darkslategray;
   display: flex;
@@ -32,7 +32,7 @@
 }
 
 .category {
-  padding:40px 100px;
+  padding:40px 100px 70px 40px;
   display:flex;
 }
 
