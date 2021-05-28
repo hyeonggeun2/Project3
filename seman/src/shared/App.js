@@ -11,7 +11,7 @@ function App(){
       <Route path="/category" component={Category}/>
       <Route path="/detail/:pid" component={Detail}/>
       <Route path="/login" component={Login}/>
-      <Route path="/SignUp" component={SignUp}/>
+      <Route path="/signup" component={SignUp}/>
     </div>
   );
 }
