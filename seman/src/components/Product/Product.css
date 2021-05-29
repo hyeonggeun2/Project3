@@ -28,7 +28,7 @@ p {
     padding: 10px 20px;
     position: absolute;
     top: 85%;
-    width: 88%;
+    width: 100% !important;
     transition: box-shadow .3s ease-in-out,
                 top .3s ease-in-out;
 }
@@ -36,7 +36,7 @@ p {
 .card:hover .details {
     box-shadow: 0 -5px 10px rgba(0,0,0,0.3);
     /* 얼마나 올라오는지 조정 */
-    top: 58%; 
+    top: 55%; 
 }
 
 .options {
@@ -89,7 +89,7 @@ p {
 }
 
 .btn {
-    background-color: darkslategray;
+    background-color: darkslategray !important;
     border-radius: 5px;
     color: #FFF;
     display: block;
@@ -97,7 +97,8 @@ p {
     text-align: center;
     text-decoration: none;
     text-transform: capitalize;
-    width: 95%;
+    color: white !important;
+    width: 100% !important;
     transition: box-shadow .3s ease-in-out,
                 transform .3s ease-in-out;
 }
