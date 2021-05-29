@@ -8,7 +8,7 @@ function Nav(){
         <a className="nav_title" href="/">SEMAN</a>
         <div className="nav_bar">
           <a className="login navs" href="/login">로그인</a>
-          <a className="info navs" href="/info">내정보</a>
+          <a className="info navs" href="/myinfo">내정보</a>
           <a className="cart navs" href="/cart">카트</a>
         </div>
       </nav>
