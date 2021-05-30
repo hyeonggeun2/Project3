@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+AUTH_USER_MODEL = 'members.User'
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     # custom
     'products.apps.ProductsConfig',
-    'users.apps.UsersConfig',
+    'members.apps.MembersConfig',
     'rest_framework',
 ]
 
