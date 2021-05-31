@@ -1,3 +1,5 @@
+# custom
+server/app/media/*
 
 # Created by https://www.toptal.com/developers/gitignore/api/react,node,git,python,visualstudiocode,visualstudio
 # Edit at https://www.toptal.com/developers/gitignore?templates=react,node,git,python,visualstudiocode,visualstudio

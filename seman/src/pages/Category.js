@@ -16,13 +16,11 @@ class Category extends Component {
   state = {
     loading: false,
     ItemList: [{
-        "code": 0,
-        "image": "",
+        "pk": 0,
         "name": "",
-        "OriginalPrice": 0,
-        "SalePrice": 0,
-        "Sizes": [],
-        "Colors": []
+        "image": "",
+        "price": 0,
+        "product_set": []
     }],
     max_page: 0
   };
@@ -30,11 +28,13 @@ class Category extends Component {
   split_path = this.props.location.pathname.split('/')
   path = this.split_path[2];
   page = this.split_path[3];
-  api_path = '/' + this.path + '.json';
+  // api_path = '/' + this.path + '.json';
+  api_path = '/api/products/' + this.path + '/' + this.page
 
   // axios를 통해 값을 loading
   loadItem = async () => {
     axios.get(this.api_path).then(({data}) => {
+      console.log(data)
       this.setState({
         loading: true,
         ItemList: data.Item,
@@ -42,6 +42,7 @@ class Category extends Component {
       });
     }).catch(e => {
       console.error(e);
+      console.log("AAAAAAAAAAAA")
       this.setState({
         loading: false
       });
@@ -55,6 +56,7 @@ class Category extends Component {
 
   render(){
     const { ItemList } = this.state;
+    console.log(ItemList)
 
     return(
       <div>
@@ -67,15 +69,19 @@ class Category extends Component {
           <li className="sort_item">인기상품</li>
         </ul>
         <div className="product_box">
-          {ItemList.map((item) => {
-            return(<Product image={item.image}
-                            detail={'/detail/' + item.code}
-                            name={item.name}
-                            originalPrice={numberWithCommas(item.OriginalPrice)}
-                            salePrice={numberWithCommas(item.SalePrice)}
-                            sizes={item.Sizes}
-                            colors={item.Colors}/>)
-          })}
+          {
+            (function() {
+              if (ItemList.length === 0) 
+                return (<div className="no_item">상품이 존재하지 않습니다.</div>);
+              else return (ItemList.map((item) => {
+                return(<Product image={item.image}
+                                detail={'/detail/' + item.pk}
+                                name={item.name}
+                                Price={numberWithCommas(item.price)}
+                                product_set={item.product_set}/>)
+              }));
+            })()
+          }
         </div>
         <Pagination page={this.page}
                     next={this.page*1 + 1}

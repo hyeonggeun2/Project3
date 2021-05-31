@@ -1,6 +1,6 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
-import {Main, Category, Detail, Login, SignUp, Cart, MyInfo} from '../pages';
+import {Main, Category, Detail, Login, SignUp, Cart, MyInfo, ProductAdd} from '../pages';
 
 function App(){
   return(
@@ -14,6 +14,7 @@ function App(){
       <Route path="/signup" component={SignUp}/>
       <Route path="/cart" component={Cart}/>
       <Route path="/myinfo" component={MyInfo}/>
+      <Route path="/product/add" component={ProductAdd}/>
     </div>
   );
 }

@@ -16,3 +16,9 @@
   list-style: none;
   padding: 0 5px;
 }
+
+.no_item{
+  margin:0 auto;
+  font-size: 15px;
+  padding: 200px;
+}

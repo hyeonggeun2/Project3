@@ -32,7 +32,8 @@ class CartAdmin(admin.ModelAdmin):
 
 @admin.register(ProductBase)
 class ProductBaseAdmin(admin.ModelAdmin):
-    pass
+    fields = ['name', 'price', 'category', 'image', 'image_tag']
+    readonly_fields = ['image_tag']
 
 
 @admin.register(ProductDetail)

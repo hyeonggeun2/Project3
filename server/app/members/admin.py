@@ -7,4 +7,5 @@ from .models import User
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    pass
+    fields = ['is_staff', 'is_active', 'grade']
+    readonly_fields = ['name', 'gender', 'email', 'phone']
