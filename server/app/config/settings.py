@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'members.apps.MembersConfig',
     'rest_framework',
     'ckeditor',
+    'rest_framework.authtoken',
     'ckeditor_uploader',
     'corsheaders',
 ]

@@ -1,19 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import Nav from "../components/Nav/Nav";
 import Footer from "../components/Footer/Footer";
 import './Login.css';
+import { useDispatch } from 'react-redux';
+import { loginUser } from '../_actions/user_action';
+import axios from "axios";
 
-function Login(){
+function Login(props){
+  const dispatch = useDispatch()
+  const [Id, setId] = useState("")
+  const [Password, setPassword] = useState("")
+
+  const onIdHandler = (e) => {
+    setId(e.target.value)
+  }
+
+  const onPasswordHandler = (e) => {
+    setPassword(e.target.value)
+  }
+
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+
+    console.log('ID', Id)
+    console.log('Password', Password)
+
+    let body = {
+      username: Id,
+      password: Password
+    }
+
+    axios.post('/api/members/login/', body)
+    // dispatch(loginUser(body)).then(
+    //   response => {
+    //     if (response.payload.loginSuccess) {
+    //       props.history.push('/') // 첫 페이지로 돌아가도록
+    //     }
+    //     else{
+    //       alert('Error')
+    //     }
+    //   }
+    // )
+  }
+
   return(
     <div>
       <Nav/>
       <h2>로그인</h2>
       <div className="login_container">
         <div className="login_box">
-          <form>
+          <form onSubmit={onSubmitHandler}>
             <div className="user_input">
-              <input type="text" name="username" placeholder="아이디"></input>
-              <input type="password" name="password" placeholder="비밀번호"></input>
+              <input type="text" name="username" placeholder="아이디" value={Id} onChange={onIdHandler}></input>
+              <input type="password" name="password" placeholder="비밀번호" value={Password} onChange={onPasswordHandler}></input>
             </div>
             <button>로그인</button>
           </form>

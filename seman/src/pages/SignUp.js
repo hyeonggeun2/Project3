@@ -34,10 +34,6 @@ function SignUp(){
               <td><input type="password" name="password1"></input></td>
             </tr>
             <tr>
-              <th>비밀번호 확인</th>
-              <td><input type="password" name="password2"></input></td>
-            </tr>
-            <tr>
               <th>이름</th>
               <td><input type="text" name="name"></input></td>
             </tr>

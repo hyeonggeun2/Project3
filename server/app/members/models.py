@@ -6,12 +6,7 @@ from django.db import models
 
 
 class User(AbstractUser):
-    GENDER_CHOICES = (
-        ('male', 'male'),
-        ('female', 'female'),
-    )
     name = models.CharField(max_length=30)
-    gender = models.CharField(max_length=10, choices=GENDER_CHOICES)
     phone = models.CharField(max_length=30)
     address = models.CharField(max_length=100)
 
