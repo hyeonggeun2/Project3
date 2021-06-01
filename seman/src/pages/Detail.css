@@ -16,7 +16,7 @@
   display: flex;
   width: 90vw;
   margin:0 auto;
-  margin-bottom: 500px;
+  margin-bottom: 30px;
 }
 
 .detail_menu li {
@@ -115,4 +115,40 @@ form {
 .detail > a{
   display:block;
   margin-bottom:20px;
+}
+
+.detail_infos{
+  width: 80vw;
+  margin: 0 auto;
+  border: 1px solid gray;
+  min-height: 300px;
+  margin-bottom: 60px;
+  padding: 30px;
+}
+
+.review_container{
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #f9f9f9;
+  margin: 15px;
+}
+
+.review_title{
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.review_content{
+  padding-left: 40px;
+  margin-bottom: 15px;
+}
+
+.review_answer{
+  margin-bottom: 5px;
+}
+
+.no_content{
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 100px;
 }

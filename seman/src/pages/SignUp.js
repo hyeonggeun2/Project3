@@ -4,6 +4,7 @@ import Footer from "../components/Footer/Footer";
 import './SignUp.css';
 import PopupDom from './PopupDom';
 import PopupPostCode from './PopupPostCode';
+import Axios from 'axios';
 
 function SignUp(){
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -22,7 +23,7 @@ function SignUp(){
       <Nav/>
       <h2>회원가입</h2>
       <div className="signup_container">
-        <form>
+        <form method="POST" action="">
           <table className="signup_table">
             <tr>
               <th>아이디</th>
@@ -31,10 +32,6 @@ function SignUp(){
             <tr>
               <th>비밀번호</th>
               <td><input type="password" name="password1"></input></td>
-            </tr>
-            <tr>
-              <th>비밀번호 확인</th>
-              <td><input type="password" name="password2"></input></td>
             </tr>
             <tr>
               <th>이름</th>

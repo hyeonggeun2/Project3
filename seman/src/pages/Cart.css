@@ -1,0 +1,147 @@
+.basketdiv {
+  width: 100%;
+  margin-top: 70px;
+  font-size: 0.9375em;
+  margin-bottom: 20px;
+}
+.basketdiv .row.head {
+  border-bottom: 2px solid #888;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  font-weight: 500;
+}
+.basketdiv .data {
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  height: 100px;
+}
+.basketdiv .data .empty{
+  text-align: center;
+  padding: 12px 0;
+}
+.basketdiv .row.head .subdiv {
+  background-color: #f4f4f4;
+}
+
+.basketdiv .row > .subdiv:nth-child(1) {
+  width: 50%;
+}
+.basketdiv .row > .subdiv:nth-child(2) {
+  width: 40%;
+}
+.basketdiv .row > .subdiv:nth-child(3) {
+  width: 10%;
+}
+
+.basketdiv .row > div > div {
+  display: block;
+  float: left;
+  text-align: center;
+  padding: 12px 0;
+}
+.basketdiv .row.data > div > div {
+  line-height: 70px;
+}
+.basketdiv .data .num .updown {
+  color: #0075ff;
+  letter-spacing: -5px;
+}
+
+.basketdiv .check {
+  width: 10%;
+}
+
+.basketdiv .check input[type=checkbox] {
+  transform: scale(1.5);
+  width: 50px;
+}
+
+.basketdiv .img{
+  width: 20%;
+}
+.basketdiv .pname{
+  width: 70%;
+}
+
+.basketdiv .basketprice {
+  width: 33%;
+}
+.basketdiv .num {
+  width: 33%;
+  min-width: 105px;
+}
+
+.basketdiv .sum {
+  width: 34%;
+  max-width: 80px;
+  color: #0000aa;
+}
+.basketdiv .point {
+  width: 50%;
+}
+
+.basketdiv .basketcmd{
+  width: 100%;
+}
+
+.basketdiv .data .price, .basketdiv .data .sum, .basketdiv .data .point {
+  text-align: center;
+}
+.baseform > tbody > tr > td:first-child {
+  width: 100px;
+}
+
+.buttongroup {
+  padding: 11px 0;
+  margin: 50px 0;
+}
+
+.abutton, .abutton:link, .abutton:visited, .abutton:active, input[type=button] {
+  background-color: darkslategray;
+  color: #ffffff !important;
+  cursor: pointer;
+  padding: 3px 5px;
+  margin: 2px 3px;
+  text-decoration: none;
+  font-size: 0.9375em;
+  display:inline-block;
+  line-height: 25px;
+}
+
+.blue {
+  color: #0075ff;
+}
+
+.basketrowcmd, .sumcount, .summoney{
+  margin-bottom: 10px;
+}
+
+.sumcount, .summoney{
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.buttongroup{
+  text-align: center;
+}
+
+.cmd a, .cmd span {
+  padding: 12px 30px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: white !important;
+  background-color: darkslategray;
+  text-align: center;
+}
+
+.orderform .p_num {
+  text-align: center;
+  width: 40px;
+}
+
+.orderform{
+  width: 900px;
+  margin: 0 auto;
+}
+

@@ -2,39 +2,26 @@ import React, { Component } from 'react';
 import './Product.css';
 
 function Product(props){
-
   return(
     <div className="card">
       <figure>
-        <img src={props.image} alt={props.name}/>
+        <img src={`data:image/jpeg;base64,${props.image}`} alt={props.name}/>
       </figure>
       <section className="details">
         <div className="min-details">
           <p className="product_name">{props.name}</p>
-          {
-            (() => {
-              if (props.salePrice == 'undefined') return (
-                <div className="price">
-                  <p className="only_original">{props.originalPrice}원</p>
-                </div>
-              );
-              else return (
-                <div className="price">
-                  <p className="original_price">{props.originalPrice}원</p>
-                  <p className="sale_price">{props.salePrice}원</p>
-                </div>
-              );
-            })()
-          }
+          <div className="price">
+            <p className="only_original">{props.Price}원</p>
+          </div>
         </div>
 
         <div className="options">
           <div className="options-size">
             <p className="option_title">sizes</p>
             <ul>
-              {props.sizes.map((size) => {
+              {props.size.split(', ').map((data) => {
                 return (
-                  <li>{size}</li>
+                  <li>{data.split(", ")[0].toUpperCase()}</li>
                 )
               })}
             </ul>
@@ -43,9 +30,9 @@ function Product(props){
           <div className="options-colors">
             <p className="option_title">colors</p>
             <ul>
-              {props.colors.map((color) => {
+              {props.color.split(', ').map((data) => {
                 return (
-                  <li style={{backgroundColor: color}}></li>
+                  <li style={{backgroundColor: data.split(", ")[0]}}></li>
                 )
               })}
             </ul>
