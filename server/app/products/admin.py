@@ -10,11 +10,6 @@ class CategoryAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
-    pass
-
-
 @admin.register(Delivery)
 class DeliveryAdmin(admin.ModelAdmin):
     pass
@@ -30,22 +25,38 @@ class CartAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(ProductBase)
-class ProductBaseAdmin(admin.ModelAdmin):
-    fields = ['name', 'price', 'category', 'image', 'image_tag']
-    readonly_fields = ['image_tag']
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_per_page = 5
+    list_display = (
+        'name', 'price', 'category'
+    )
+    list_editable = ('price',)
+    list_filter = ('category',)
+    search_fields = ('name',)
 
-
-@admin.register(ProductDetail)
-class ProductDetailAdmin(admin.ModelAdmin):
-    pass
+    fields = ['name', 'price', 'category', 'color', 'size', 'info', 'buy_guide', 'image']
 
 
 @admin.register(QnA)
 class QnAAdmin(admin.ModelAdmin):
-    pass
+    list_per_page = 5
+    list_display = (
+        'product', 'title', 'date'
+    )
+    list_filter = ('date',)
+
+    fields = ['product', 'title', 'question', 'answer', 'date']
+    readonly_fields = ['date']
 
 
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
-    pass
+    list_per_page = 5
+    list_display = (
+        'product', 'title', 'date'
+    )
+    list_filter = ('date',)
+
+    fields = ['product', 'title', 'content', 'answer', 'date']
+    readonly_fields = ['date']

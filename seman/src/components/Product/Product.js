@@ -19,9 +19,9 @@ function Product(props){
           <div className="options-size">
             <p className="option_title">sizes</p>
             <ul>
-              {props.product_set.map((data) => {
+              {props.size.split(', ').map((data) => {
                 return (
-                  <li>{data.split(", ")[1]}</li>
+                  <li>{data.split(", ")[0].toUpperCase()}</li>
                 )
               })}
             </ul>
@@ -30,7 +30,7 @@ function Product(props){
           <div className="options-colors">
             <p className="option_title">colors</p>
             <ul>
-              {props.product_set.map((data) => {
+              {props.color.split(', ').map((data) => {
                 return (
                   <li style={{backgroundColor: data.split(", ")[0]}}></li>
                 )

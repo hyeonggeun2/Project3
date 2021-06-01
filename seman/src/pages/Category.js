@@ -18,9 +18,10 @@ class Category extends Component {
     ItemList: [{
         "pk": 0,
         "name": "",
-        "image": "",
         "price": 0,
-        "product_set": []
+        "color": "",
+        "size": "",
+        "image": ""
     }],
     max_page: 0
   };
@@ -34,7 +35,6 @@ class Category extends Component {
   // axios를 통해 값을 loading
   loadItem = async () => {
     axios.get(this.api_path).then(({data}) => {
-      console.log(data)
       this.setState({
         loading: true,
         ItemList: data.Item,
@@ -42,7 +42,6 @@ class Category extends Component {
       });
     }).catch(e => {
       console.error(e);
-      console.log("AAAAAAAAAAAA")
       this.setState({
         loading: false
       });
@@ -78,7 +77,8 @@ class Category extends Component {
                                 detail={'/detail/' + item.pk}
                                 name={item.name}
                                 Price={numberWithCommas(item.price)}
-                                product_set={item.product_set}/>)
+                                color={item.color}
+                                size={item.size}/>)
               }));
             })()
           }

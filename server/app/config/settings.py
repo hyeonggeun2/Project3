@@ -151,3 +151,5 @@ CKEDITOR_UPLOAD_PATH = 'uploads/'
 
 CORS_ALLOW_ALL_ORIGINS = True
 STATIC_ROOT = '.static/'
+
+DATETIME_FORMAT = "%Y-%m-%d %H:%M:%S"
